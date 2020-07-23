@@ -2,7 +2,7 @@
  * AJAX Examples
  */
 
-const { axios } = ("../vendor/axios/js/axios.min");
+//const { axios } = ("../vendor/axios/js/axios.min");
 
 
 
