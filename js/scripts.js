@@ -18,5 +18,22 @@ fetch( "http://api.open-notify.org/astros.json" ) // Sends the request...
 // Data has been formatted, let's have a look inside...
 .then( data => {
     // Output data to console for testing.
-    console.log( data )
+    console.log( data );
+    // Prepare for HTMl list.
+    const peopleUL = document.createElement( "UL" );
+    //Let's grab those people!
+    const people = data.people; // this is an array of people...
+    //Let's loop through them!
+    for (const person of people)
+    {
+        //Prepare an LI for this person.
+        const personLI = document.createElement( "LI" );
+        // Add some text content (using template literal to inject our values.)
+        personLI.textContent = `${person.name} is currently aboard ${person.craft}`;
+        //Add this <li> to our <ul>.
+        peopleUL.appendChild( personLI );
+    }
+    // Add our <ul> to the <body> so we can see it in the browser !
+    document.body.appendChild( peopleUL );
+    
 })
