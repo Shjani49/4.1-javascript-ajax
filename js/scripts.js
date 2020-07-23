@@ -2,6 +2,8 @@
  * AJAX Examples
  */
 
+//const { axios } = require("../vendor/axios/js/axios.min");
+
 // Retrieving an external resource (text file.)
 fetch( "http://api.open-notify.org/astros.json" ) // Sends the request...
 // We can use .then() to parse the response.
@@ -35,5 +37,8 @@ fetch( "http://api.open-notify.org/astros.json" ) // Sends the request...
     }
     // Add our <ul> to the <body> so we can see it in the browser !
     document.body.appendChild( peopleUL );
-    
+
 })
+axios;//If we don't get an error on this line, Axios is installed and working!
+
+
